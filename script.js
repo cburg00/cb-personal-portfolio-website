@@ -26,4 +26,21 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-  
+
+  document.querySelectorAll('.skills-con').forEach(container => {
+    container.addEventListener('click', () => {
+        const info = container.querySelector('.skill-info');
+        if (info) {
+            if (info.classList.contains('show')) {
+                // Collapse
+                info.style.maxHeight = null;
+                info.classList.remove('show');
+            } else {
+                // Expand
+                info.style.maxHeight = info.scrollHeight + 'px'; // Dynamically set height
+                info.classList.add('show');
+            }
+        }
+    });
+});
+
