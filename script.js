@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 info.classList.remove('show');
             } else {
                 // Expand
-                info.style.maxHeight = info.scrollHeight + 'px'; // Dynamically set height
+                info.style.maxHeight = info.scrollHeight + 'rem'; // Dynamically set height
                 info.classList.add('show');
             }
         }
